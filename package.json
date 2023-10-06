@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youtlane/projet-ohmyfood.git"
+  },
+  "author": "Hanane Youtlane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youtlane/projet-ohmyfood/issues"
+  },
+  "homepage": "https://github.com/youtlane/projet-ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.64.0"
+  }
+}
