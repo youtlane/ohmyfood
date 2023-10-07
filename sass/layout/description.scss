@@ -1,0 +1,27 @@
+.description{
+    background-color: $offWhite;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include centerV;
+    gap: 18px;
+    &_title{
+        margin: 0;
+        font-size: 40px;
+        font-weight: 700;
+    }
+    &_text{
+        font-size: 18px;
+        font-weight: 300;
+        color: $darkGrey;
+        margin: 0;
+    }
+    &_button{
+        @include button-shadow;
+        @include button-style;
+        &:hover{
+            opacity:89%;
+        }
+    }
+    
+}

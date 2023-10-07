@@ -1,0 +1,19 @@
+.location {
+    @include centerVH;
+    gap: 17px;
+    background-color: $lightGrey;
+    height: 50px;
+
+    &_icon.fa-solid.fa-location-dot,
+    &_text {
+        font-size: 16px;
+    }
+
+    &_icon.fa-solid.fa-location-dot {
+        color: $darkGrey;
+    }
+
+    &_text {
+        font-weight: 500;
+    }
+}

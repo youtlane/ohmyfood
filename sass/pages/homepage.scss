@@ -1,0 +1,100 @@
+.list__services{
+    padding: 50px 180px;
+    margin: 30px 0px;
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0px;
+    }
+    &__containers {
+        display: flex;
+        gap: 36px;
+        width: 100%;
+        .service{
+            margin-top: 25px;
+            @include centerV;
+            &__number{
+                border: 0px;
+                color: $white;
+                background-color: $purple;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                @include centerVH;
+                position: absolute;
+                margin-left: -10px;
+            }
+            &__button {
+                @include centerV;
+                padding-left: 35px;
+                border: 0px;
+                border-radius: 20px;
+                width: 323px;
+                height: 73px;
+                font-size: 16px;
+                background-color: $offWhite;
+                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            }
+            &__icon.fa {
+                @include iconService;
+            }
+        }
+
+    }
+    
+}
+.restaurants{
+    background-color:$offWhite;
+    padding: 0px 180px;
+    border: 2px solid blue;
+    
+
+    .resturants_title{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .restaurant_card{
+        display: flex ;
+        flex-wrap: wrap;
+        gap: 100px;   
+        border: 2px solid red;
+        width: 100%;
+    }
+    .card {
+        background-color: $white;
+        border-radius: 15px;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    }
+    .restaurant_picture{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 490px;
+        height: 174px;
+        object-fit: cover;
+    }
+    .restaurant_title_icon{
+        display: flex;
+    }
+    .restaurant_card_icon.fa-regular.fa-heart {
+        align-content: center;
+        margin-left: auto;
+        margin-top: 23px;
+        margin-right: 25px;
+        font-size: 22px;
+    }
+    .restaurant_card_title {
+        margin-top: 16px;
+        margin-bottom: 0;
+        padding-left: 13px;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .restaurant_card_text{
+        padding-left: 13px;
+        margin-top: 0px;
+        font-family: Roboto;
+        font-size: 17px;
+    }
+
+}

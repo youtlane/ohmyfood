@@ -2,7 +2,6 @@
 <html lang="fr">
 
     <head>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ohmyfood</title>
@@ -11,8 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
             integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- <link rel="stylesheet" href="assets/css/styles.css">-->
-
+        <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
         <header>
@@ -27,8 +25,103 @@
             <p class="description_text">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
             <button class="description_button">Explorer nos restaurants</button>
         </div>
+        <main class="">
+            <!--section of the resturant services-->
+            <section class="list__services">
+                <h2 class="list__services__title">Fonctionnement</h2>
+                <div class="list__services__containers">
+                    <div class="service">
+                        <span class="service__number">1</span>
+                        <button class="service__button">
+                            <i class="service__icon fa fa-mobile-screen-button"></i>
+                            Choisissez un restaurant
+                        </button>
+                    </div>
+                    <div class="service">
+                        <span class="service__number">2</span>
+                        <button class="service__button">
+                            <i class="service__icon fa fa-mobile-screen-button"></i>
+                            Choisissez un restaurant
+                        </button>
+                    </div>
+                    <div class="service">
+                        <span class="service__number">3</span>
+                        <button class="service__button">
+                            <i class="service__icon fa fa-mobile-screen-button"></i>
+                            Choisissez un restaurant
+                        </button>
+                    </div>
+                </div> 
+            </section>
+            <section class="restaurants">
+                <h2 class="resturants_title">Restaurants</h2>
+                <div class="restaurant_card">
+                    <article class="card">
+                        <img class="restaurant_picture" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                        <div class="">
+                            <span class="restaurant_title_icon">
+                                <h3 class="restaurant_card_title">La palette du goût</h3>
+                                <i class="restaurant_card_icon fa-regular fa-heart"></i>
+                            </span>
+                            <p class="restaurant_card_text">Ménilmontant</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img class="restaurant_picture" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                        <div class="">
+                            <span class="restaurant_title_icon">
+                                <h3 class="restaurant_card_title">La palette du goût</h3>
+                                <i class="restaurant_card_icon fa-regular fa-heart"></i>
+                            </span>
+                            <p class="restaurant_card_text">Ménilmontant</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img class="restaurant_picture" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                        <div class="">
+                            <span class="restaurant_title_icon">
+                                <h3 class="restaurant_card_title">La palette du goût</h3>
+                                <i class="restaurant_card_icon fa-regular fa-heart"></i>
+                            </span>
+                            <p class="restaurant_card_text">Ménilmontant</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img class="restaurant_picture" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                        <div class="">
+                            <span class="restaurant_title_icon">
+                                <h3 class="restaurant_card_title">La palette du goût</h3>
+                                <i class="restaurant_card_icon fa-regular fa-heart"></i>
+                            </span>
+                            <p class="restaurant_card_text">Ménilmontant</p>
+                        </div>
+                    </article>
 
+                </div>
+            
+            </section>
+        </main>
 
+        <footer>
+            <h3 class="footer_title">Ohmyfood</h3>
+            <nav class="footer_nav">
+                <ul>
+                    <li>
+                        <a href="#">Proposer un restaurant</a>
+                    </li>
+                    <li>
+                        <a href="#">Devenir partenaire</a>
+                    </li>
+                    <li>
+                        <a href="#">Mentions légales</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a><!--renvoi vers une adresse mail est effectué-->
+                    </li>
+                </ul>
+            </nav>
+    
+        </footer>
 
 
 

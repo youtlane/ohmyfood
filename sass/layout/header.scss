@@ -1,0 +1,10 @@
+header{
+    @include centerVH;
+    padding-top: 30px;
+    padding-bottom: 31px;
+    @include badge-shadow;
+    position: relative;
+    @media screen and (max-width: 768px){
+        padding: 14px 89px 13px 89px;
+    }
+}
