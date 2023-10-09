@@ -1,15 +1,27 @@
+
 .list__services{
     padding: 50px 180px;
     margin: 30px 0px;
+    @media screen and (max-width: 768px){
+       
+        padding: 48px 20px 68px;
+        margin: 0px;
+    }
     &__title {
         font-size: 24px;
         font-weight: 700;
         margin: 0px;
-    }
+    }    
     &__containers {
         display: flex;
         gap: 36px;
         width: 100%;
+        @media screen and (max-width: 768px){
+            display: flex;
+            flex-direction: column;
+            padding: 0px 17px;
+            gap:0px;
+        }
         .service{
             margin-top: 25px;
             @include centerV;
@@ -33,7 +45,7 @@
                 height: 73px;
                 font-size: 16px;
                 background-color: $offWhite;
-                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+                @include shadow;
             }
             &__icon.fa {
                 @include iconService;
@@ -42,59 +54,79 @@
 
     }
     
-}
-.restaurants{
-    background-color:$offWhite;
-    padding: 0px 180px;
-    border: 2px solid blue;
     
+    
+}
+.restaurants {
+    background-color: $offWhite;
+    padding: 0px 180px 30px;
 
-    .resturants_title{
+    @media screen and (max-width: 768px){
+        padding: 0px;
+    }
+
+    .resturants__title {
         font-size: 24px;
         font-weight: 700;
-    }
-    .restaurant_card{
-        display: flex ;
-        flex-wrap: wrap;
-        gap: 100px;   
-        border: 2px solid red;
-        width: 100%;
-    }
-    .card {
-        background-color: $white;
-        border-radius: 15px;
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    }
-    .restaurant_picture{
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        width: 490px;
-        height: 174px;
-        object-fit: cover;
-    }
-    .restaurant_title_icon{
-        display: flex;
-    }
-    .restaurant_card_icon.fa-regular.fa-heart {
-        align-content: center;
-        margin-left: auto;
-        margin-top: 23px;
-        margin-right: 25px;
-        font-size: 22px;
-    }
-    .restaurant_card_title {
-        margin-top: 16px;
-        margin-bottom: 0;
-        padding-left: 13px;
-        font-family: Roboto;
-        font-size: 18px;
-        font-weight: 700;
-    }
-    .restaurant_card_text{
-        padding-left: 13px;
-        margin-top: 0px;
-        font-family: Roboto;
-        font-size: 17px;
+        @media screen and (max-width: 768px){
+            padding:54px 80px 0px 20px;
+        }
     }
 
+    .restaurant__cards{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+        width: 100%;
+        @media screen and (max-width: 768px){
+            gap: 18px;
+            padding-right: 18px;
+            padding-left: 17px;
+        }
+
+        .card {
+            @include cardStyles;
+
+
+            .card__pic {
+                border-radius: 15px 15px 0 0;
+                width: $picture-width-desktop;
+                height: $picture-height;
+                object-fit: cover;
+                @media screen and (max-width: 768px){
+                    width: $picture-width-mobile;
+                }
+            }
+            .card__badge{
+                @include badge;
+            }
+
+            .card__infos {
+                display: flex;
+
+                .card__infos__icon.fa-regular.fa-heart {
+                    align-self: center;
+                    margin-left: auto;
+                    margin-right: 25px;
+                    font-size: 22px;
+                }
+            }
+
+            .card__infos__title {
+                margin-top: 16px;
+                margin-bottom: 0;
+                padding-left: 13px;
+                font-size: 18px;
+                font-weight: 700;
+                color: black;
+            }
+
+            .card__infos__text {
+                padding-left: 13px;
+                margin-top: 0;
+                font-size: 17px;
+                color: black;
+            }
+        }
+    }
 }

@@ -1,10 +1,22 @@
-$font-family_1: 'Roboto' , sans-serif;
 
-*, *:before, *:after {
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
 }
+
 body {
 	margin: 0;
 	font-family: $font-family_1;
-    
+}
+
+a {
+	text-decoration: none;
+}
+
+.row-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
 }
