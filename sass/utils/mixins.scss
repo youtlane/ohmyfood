@@ -44,6 +44,12 @@
     position: relative;
     @include shadow;
 }
+
+@mixin heart{
+    content: '\f004';
+    font-family: "Font Awesome 5 Free";
+}
+
 @mixin badge{
     width: 80px;
     text-align: center;

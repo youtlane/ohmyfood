@@ -162,6 +162,9 @@ header {
   color: #7E7E7E;
   padding-right: 17px;
 }
+.list__services__containers .service:hover .service__icon.fa {
+  color: #9356DC;
+}
 
 .restaurants {
   background-color: #F6F6F6;
@@ -200,18 +203,21 @@ header {
   position: relative;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-.restaurants .restaurant__cards .card .card__pic {
+.restaurants .restaurant__cards .card .card__link {
+  color: black;
+}
+.restaurants .restaurant__cards .card .card__link .card__pic {
   border-radius: 15px 15px 0 0;
   width: 490px;
   height: 174px;
   object-fit: cover;
 }
 @media screen and (max-width: 768px) {
-  .restaurants .restaurant__cards .card .card__pic {
+  .restaurants .restaurant__cards .card .card__link .card__pic {
     width: 346px;
   }
 }
-.restaurants .restaurant__cards .card .card__badge {
+.restaurants .restaurant__cards .card .card__link .card__badge {
   width: 80px;
   text-align: center;
   color: #008766;
@@ -224,16 +230,11 @@ header {
   margin-right: 17px;
   margin-top: 13px;
 }
-.restaurants .restaurant__cards .card .card__infos {
+.restaurants .restaurant__cards .card .card__link .card__content {
   display: flex;
+  justify-content: space-between;
 }
-.restaurants .restaurant__cards .card .card__infos .card__infos__icon.fa-regular.fa-heart {
-  align-self: center;
-  margin-left: auto;
-  margin-right: 25px;
-  font-size: 22px;
-}
-.restaurants .restaurant__cards .card .card__infos__title {
+.restaurants .restaurant__cards .card .card__link .card__content .card__infos__title {
   margin-top: 16px;
   margin-bottom: 0;
   padding-left: 13px;
@@ -241,11 +242,22 @@ header {
   font-weight: 700;
   color: black;
 }
-.restaurants .restaurant__cards .card .card__infos__text {
+.restaurants .restaurant__cards .card .card__link .card__content .card__text {
   padding-left: 13px;
   margin-top: 0;
   font-size: 17px;
   color: black;
+}
+.restaurants .restaurant__cards .card .card__link .card__content .card__infos__icon {
+  display: flex;
+  align-items: center;
+  /*! margin-left: auto; */
+  margin-right: 25px;
+  font-size: 22px;
+}
+
+.menu__content__card {
+  border: 2px solid red;
 }
 
 footer {
@@ -260,6 +272,7 @@ footer {
 }
 @media screen and (max-width: 768px) {
   footer {
+    margin-top: 68px;
     flex-direction: column;
     height: 100%;
   }

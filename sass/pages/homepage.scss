@@ -49,22 +49,23 @@
             }
             &__icon.fa {
                 @include iconService;
+                
             }
+        
+        }
+        .service:hover .service__icon.fa {
+            color: $purple;
         }
 
-    }
-    
-    
-    
+    }  
 }
+
 .restaurants {
     background-color: $offWhite;
     padding: 0px 180px 30px;
-
     @media screen and (max-width: 768px){
         padding: 0px;
     }
-
     .resturants__title {
         font-size: 24px;
         font-weight: 700;
@@ -87,46 +88,48 @@
         .card {
             @include cardStyles;
 
-
-            .card__pic {
-                border-radius: 15px 15px 0 0;
-                width: $picture-width-desktop;
-                height: $picture-height;
-                object-fit: cover;
-                @media screen and (max-width: 768px){
-                    width: $picture-width-mobile;
-                }
-            }
-            .card__badge{
-                @include badge;
-            }
-
-            .card__infos {
-                display: flex;
-
-                .card__infos__icon.fa-regular.fa-heart {
-                    align-self: center;
-                    margin-left: auto;
-                    margin-right: 25px;
-                    font-size: 22px;
-                }
-            }
-
-            .card__infos__title {
-                margin-top: 16px;
-                margin-bottom: 0;
-                padding-left: 13px;
-                font-size: 18px;
-                font-weight: 700;
+            .card__link {
                 color: black;
-            }
-
-            .card__infos__text {
-                padding-left: 13px;
-                margin-top: 0;
-                font-size: 17px;
-                color: black;
+              
+                .card__pic {
+                    border-radius: 15px 15px 0 0;
+                    width: $picture-width-desktop;
+                    height: $picture-height;
+                    object-fit: cover;
+                    @media screen and (max-width: 768px){
+                        width: $picture-width-mobile;
+                    }
+                }
+                .card__badge{
+                    @include badge;
+                }
+                .card__content {
+                    display: flex;
+                    justify-content: space-between;
+                    .card__infos__title {
+                        margin-top: 16px;
+                        margin-bottom: 0;
+                        padding-left: 13px;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: black;
+                    }
+                    .card__text {
+                        padding-left: 13px;
+                        margin-top: 0;
+                        font-size: 17px;
+                        color: black;
+                    }
+                    .card__infos__icon {
+                        display: flex;
+                        align-items: center;
+                        /*! margin-left: auto; */
+                        margin-right: 25px;
+                        font-size: 22px;
+                    }
+                }
             }
         }
     }
+
 }
