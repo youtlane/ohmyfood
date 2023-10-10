@@ -1,8 +1,9 @@
+
 .description{
+    padding: 30px 0px;
     background-color: $offWhite;
     flex-direction: column;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    
     @include centerV;
     gap: 18px;
     &_title{
@@ -29,7 +30,8 @@
         @include button-shadow;
         @include button-style;
         &:hover{
-            opacity:89%;
+            opacity: 89%;
+            @include dark-shadow;
         }
     }
     

@@ -1,31 +1,28 @@
-
-.list__services{
+.services {
+    border: 2px solid blue;
     padding: 50px 180px;
-    margin: 30px 0px;
-    @media screen and (max-width: 768px){
-       
-        padding: 48px 20px 68px;
-        margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    .title {
+        border: 2px solid red;
+        @include titles;
     }
-    &__title {
-        font-size: 24px;
-        font-weight: 700;
-        margin: 0px;
-    }    
-    &__containers {
+    @media screen and (max-width: 768px) {
+        
+        padding: 0px 20px;
+    }
+
+    .list__service {
         display: flex;
-        gap: 36px;
-        width: 100%;
-        @media screen and (max-width: 768px){
-            display: flex;
-            flex-direction: column;
-            padding: 0px 17px;
-            gap:0px;
-        }
-        .service{
-            margin-top: 25px;
+        gap: 32px;
+        border: 2px solid green;
+
+        .service {
             @include centerV;
-            &__number{
+
+            &__number {
                 border: 0px;
                 color: $white;
                 background-color: $purple;
@@ -36,6 +33,7 @@
                 position: absolute;
                 margin-left: -10px;
             }
+
             &__button {
                 @include centerV;
                 padding-left: 35px;
@@ -45,91 +43,117 @@
                 height: 73px;
                 font-size: 16px;
                 background-color: $offWhite;
-                @include shadow;
+                @include light-shadow;
             }
+
             &__icon.fa {
                 @include iconService;
-                
+
             }
-        
         }
+
         .service:hover .service__icon.fa {
             color: $purple;
         }
 
-    }  
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            padding: 0px;
+        }
+    }
+
 }
 
 .restaurants {
-    background-color: $offWhite;
-    padding: 0px 180px 30px;
-    @media screen and (max-width: 768px){
-        padding: 0px;
-    }
-    .resturants__title {
-        font-size: 24px;
-        font-weight: 700;
-        @media screen and (max-width: 768px){
-            padding:54px 80px 0px 20px;
-        }
+    padding: 0px 180px;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+    margin-bottom: 30px;
+    @media screen and (max-width: 768px) {
+        
+        padding: 0px 20px;
     }
 
-    .restaurant__cards{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 100px;
+
+    .title {
+        @include titles;
+        border: 2px solid black;
+    }
+
+    .list__resturant {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 50px 100px; 
+        border: 2px solid green;
         width: 100%;
-        @media screen and (max-width: 768px){
-            gap: 18px;
-            padding-right: 18px;
-            padding-left: 17px;
-        }
-
         .card {
+            @include centerV;
             @include cardStyles;
 
             .card__link {
                 color: black;
-              
+
                 .card__pic {
                     border-radius: 15px 15px 0 0;
                     width: $picture-width-desktop;
                     height: $picture-height;
                     object-fit: cover;
-                    @media screen and (max-width: 768px){
+
+                    @media screen and (max-width: 768px) {
                         width: $picture-width-mobile;
                     }
                 }
-                .card__badge{
-                    @include badge;
+            }
+
+            .card__badge {
+                @include badge;
+            }
+
+            .card__content {
+                display: flex;
+                justify-content: space-between;
+
+                .card__infos__title {
+                    margin-top: 16px;
+                    margin-bottom: 0;
+                    padding-left: 13px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: black;
                 }
-                .card__content {
+
+                .card__text {
+                    padding-left: 13px;
+                    margin-top: 0;
+                    font-size: 17px;
+                    color: black;
+                }
+
+                .card__infos__icon {
                     display: flex;
-                    justify-content: space-between;
-                    .card__infos__title {
-                        margin-top: 16px;
-                        margin-bottom: 0;
-                        padding-left: 13px;
-                        font-size: 18px;
-                        font-weight: 700;
-                        color: black;
+                    align-items: center;
+                    margin-right: 25px;
+                    font-size: 22px;
+                    position: relative;
+                    background: white;
+                    border: 0;
+
+                    .fa-solid.fa-heart {
+                        position: absolute;
+                        color: transparent;
+                        transition: all .8s ease-in-out;
                     }
-                    .card__text {
-                        padding-left: 13px;
-                        margin-top: 0;
-                        font-size: 17px;
-                        color: black;
+
+                    .fa-solid.fa-heart:hover {
+                        color: purple;
                     }
-                    .card__infos__icon {
-                        display: flex;
-                        align-items: center;
-                        /*! margin-left: auto; */
-                        margin-right: 25px;
-                        font-size: 22px;
-                    }
+
+
                 }
             }
         }
     }
-
 }

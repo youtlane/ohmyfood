@@ -1,10 +1,32 @@
 header{
-    @include centerVH;
-    padding-top: 30px;
-    padding-bottom: 31px;
-    @include badge-shadow;
-    position: relative;
-    @media screen and (max-width: 768px){
-        padding: 14px 89px 13px 89px;
+    text-align: center;
+    width: 100%;
+    border: 2px solid red;
+    .logo{
+        @include dark-shadow;
+        position: relative;
+        height: 96px;
+        padding: 30px 0px 31.798px 0px; 
     }
+    .location {
+        @include centerVH;
+        gap: 17px;
+        background-color: $lightGrey;
+        height: 50px;
+    
+        &_icon.fa-solid.fa-location-dot,
+        &_text {
+            font-size: 16px;
+        }
+    
+        &_icon.fa-solid.fa-location-dot {
+            color: $darkGrey;
+        }
+    
+        &_text {
+            font-weight: 500;
+        }
+        
+    }
+
 }
