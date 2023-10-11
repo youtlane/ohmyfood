@@ -175,6 +175,7 @@ header .location_text {
   gap: 28px;
   width: 100%;
   margin-bottom: 30px;
+  background-color: #F6F6F6;
 }
 @media screen and (max-width: 768px) {
   .restaurants {
@@ -208,7 +209,7 @@ header .location_text {
 }
 .restaurants .list__resturant .card .card__link .card__pic {
   border-radius: 15px 15px 0 0;
-  width: 535px;
+  width: 526px;
   height: 174px;
   object-fit: cover;
 }
@@ -257,13 +258,20 @@ header .location_text {
   background: white;
   border: 0;
 }
-.restaurants .list__resturant .card .card__content .card__infos__icon .fa-solid.fa-heart {
+.restaurants .list__resturant .card .card__content .card__infos__icon .fa-regular.fa-heart {
   position: absolute;
-  color: transparent;
-  transition: all 0.8s ease-in-out;
+  background-color: white;
+  transition: opacity 1000ms ease-in-out;
 }
-.restaurants .list__resturant .card .card__content .card__infos__icon .fa-solid.fa-heart:hover {
-  color: purple;
+.restaurants .list__resturant .card .card__content .card__infos__icon .fa-regular.fa-heart:hover {
+  opacity: 0; /* Favorite__ico dissapear on hover, favorite__ico--color appears instead */
+  cursor: pointer;
+}
+.restaurants .list__resturant .card .card__content .card__infos__icon .fa-solid.fa-heart {
+  color: transparent;
+  background-image: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .menu__content__card {
